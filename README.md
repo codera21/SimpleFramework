@@ -1,9 +1,13 @@
 # SimpleFramework
 It is a MVC framwork made in PHP .
+##Requirement 
+Since I am using latest version of twig and it needs at least php 7.0. 
+you will need what a typical php project will require. 
+   
 ## Installation 
-1. Clone this repository 
+1. clone this repository 
 2. run composer update 
-## Basic Usage
+
 
 ### Using the Controller
  Inside `Application\WebInterface`you will see three folders `Controllers` , `Models` , `ViewModels` , `Views`. Goto Controllers then Create one new Controller Let's Say `PageController.php`  with one method `IndexAction()` the code is as shown below:
@@ -84,7 +88,7 @@ class Items extends ModelAbstract
 }
 ```
 ### Repository 
-Make a Repo of database functions in `Application/Repository` make a new class ItemRepo with constructor initalized with Model class ( made above) and table like this:
+Make a Repo of database functions in `Application/Repository` make a new class ItemRepo with constructor initialized with Model class ( made above) and table like this:
 ```
 <?php
 use System\Repositories\Repo;
@@ -159,14 +163,4 @@ public function Custom($id)
 ```
 
 #### Many More Features
-There are many more features of SimpleFramework, that is not covered here. please go through this framework and see for yourself ! 
-
-
-
-
-
-
-
-
-
-
+There are many more features of SimpleFramework, that is not covered here. please go through this framework and see for yourself :) 
