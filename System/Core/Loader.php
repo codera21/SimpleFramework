@@ -1,26 +1,10 @@
 <?php
-
 namespace System\Core;
-
 
 use Infrastructure\TwigShared;
 
 class Loader
 {
-    function Library($class, $directory = NULL)
-    {
-        foreach (array(APP_PATH, SYSTEM_PATH) as $path) {
-            $file = $path . DS . 'Libraries' . DS . $directory . DS . $class . '.php';
-            if (file_exists($file)) {
-                if (class_exists($file) === FALSE) {
-                    require_once($file);
-                    return;
-                } else
-                    throw new \Exception("Unable to load the requested class: $class");
-            } else
-                throw new \Exception("Unable to load the requested class file: $class.php");
-        }
-    }
 
     function View($viewFile, $data = array())
     {
