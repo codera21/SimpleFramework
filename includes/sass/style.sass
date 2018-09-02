@@ -1,0 +1,2328 @@
+/*__________________________________________________________________________ Basic        */
+
+a, input, button
+  &:focus, &:active
+    outline: 0
+
+.coming-soon
+  font-size: 60px
+  margin-top: 55px
+
+/*__________________________________________________________________________ Header        */
+
+#header
+  background-color: #fff
+  .container
+    padding: 9px 0
+    > .logo
+      float: left
+      margin-left: 10px
+
+    .login
+      margin: 10px 10px 0 0
+      float: right
+      a
+        float: right
+        padding: 4px 15px
+        font-size: 16px
+        line-height: 20px
+        color: #283037
+        text-transform: uppercase
+        text-decoration: none
+        border: 2px solid #283037
+        -webkit-border-radius: 5px
+        -moz-border-radius: 5px
+        -o-border-radius: 5px
+        border-radius: 5px
+
+    .login-in
+      margin: 16px 0 0 0
+      float: right
+      position: relative
+      .notifications
+        float: right
+        position: relative
+        > a
+          float: right
+          width: 23px
+          height: 23px
+          margin: 0 10px 0 20px
+          text-indent: -9999px
+          background: url('../images/i_notification.png') no-repeat 0 0
+        .notifications-dropdown
+          position: absolute
+          z-index: 10
+          top: 35px
+          right: 4px
+          width: 328px
+          padding: 10px 0
+          display: none
+          background-color: #fff
+          border: 1px solid #dbdee1
+          -webkit-border-radius: 5px
+          -moz-border-radius: 5px
+          -o-border-radius: 5px
+          border-radius: 5px
+          -webkit-box-shadow: 0 1px 7px -3px #bbb
+          -moz-box-shadow: 0 1px 7px -3px #bbb
+          box-shadow: 0 1px 7px -3px #bbb
+          h4
+            float: left
+            margin-left: 10px
+            font-size: 12px
+            font-weight: 600
+            text-transform: uppercase
+          .all-read
+            float: right
+            font-size: 10px
+            line-height: 13px
+            margin-right: 10px
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+          .one-notification-arrow
+            position: absolute
+            top: -7px
+            right: 10px
+            width: 12px
+            height: 7px
+            background: url('../images/tooltip_arrow.png') no-repeat 0 0
+          .one-notification
+            clear: both
+            padding: 5px 10px
+            border-bottom: 1px solid #dbdee1
+            .one-notification-image
+              float: left
+              margin-right: 10px
+            .one-notification-text
+              display: table
+              *
+                line-height: 13px
+                font-size: 11px
+              p
+                margin: 10px 0 0
+
+              span
+                display: block
+                font-weight: 600
+              > a
+                display: block
+                text-decoration: none
+                &:hover
+                  text-decoration: underline
+          .last
+            border: none
+            padding: 5px 10px 0
+
+      .have-message > a
+        background-position: 0 -25px
+      .account
+        float: right
+        position: relative
+        > a
+          float: right
+          color: #111921
+          margin-top: 1px
+          font-size: 16px
+          font-weight: 600
+          text-transform: capitalize
+          text-decoration: none
+          padding-right: 15px
+          background: url('../images/arrow2.png') no-repeat right 9px
+        .account-dropdown
+          list-style: none
+          margin: 0
+          position: absolute
+          z-index: 10
+          top: 35px
+          right: -7px
+          width: 118px
+          padding: 5px 9px
+          display: none
+          background-color: #fff
+          border: 1px solid #dbdee1
+          -webkit-border-radius: 5px
+          -moz-border-radius: 5px
+          -o-border-radius: 5px
+          border-radius: 5px
+          -webkit-box-shadow: 0 1px 7px -3px #bbb
+          -moz-box-shadow: 0 1px 7px -3px #bbb
+          box-shadow: 0 1px 7px -3px #bbb
+          li
+
+            a
+              display: block
+              margin: 10px 0
+              padding: 0 10px
+              color: #111921
+              font-size: 13px
+              text-decoration: none
+              &:hover
+                text-decoration: underline
+          .last
+            border-top: 1px solid #dbdee1
+
+    .socials
+      margin: 14px 20px 0 0
+      float: right
+
+      line-height: 26px
+      a
+        display: inline-block
+        margin-bottom: -7px
+        width: 26px
+        height: 26px
+        margin-left: 10px
+        background: url('../images/socials.png') no-repeat
+      .facebook
+        background-position: left 0
+      .twitter
+        background-position: right 0
+
+    .modal-body
+      text-align: center
+      .logo
+        display: block
+        text-align: center
+      .align-left
+        float: left
+        margin: 13px 0 0 0
+      .align-right
+        float: right
+
+      .button
+        font-size: 14px
+        font-weight: 400
+        margin: 0
+
+      p
+        margin-bottom: 20px
+        a
+          font-size: 12px
+          font-weight: 600
+        .modal-text
+          font-size: 16px
+          color: #0f75bc
+      .input-group
+        margin-bottom: 20px
+        .form-control::-webkit-input-placeholder
+          color: #c4bbb2
+        .form-control::-moz-placeholder, .form-control::-moz-placeholder
+          color: #c4bbb2
+        .form-c4bbb2:-ms-input-placeholder
+          color: #c4bbb2
+      .checkbox-group
+        text-align: left
+
+      .error-group
+        .input-group-addon
+          background-color: #f8ece4
+          color: #eda58f
+          border: 1px solid #e86741
+          border-right: none
+        .form-control
+          border: 1px solid #e86741
+        .form-control::-webkit-input-placeholder
+          color: #ae3d1c
+        .form-control::-moz-placeholder, .form-control::-moz-placeholder
+          color: #ae3d1c
+        .form-control:-ms-input-placeholder
+          color: #ae3d1c
+        input[type=checkbox].css-checkbox + label.css-label
+          background-position: 0 -60px
+
+    .modal-header
+      background-color: #f4f7fa
+      text-align: center
+      font-size: 30px
+      font-weight: 300
+      color: #21649c
+      -webkit-border-radius: 6px 6px 0 0
+      -moz-border-radius: 6px 6px 0 0
+      -o-border-radius: 6px 6px 0 0
+      border-radius: 6px 6px 0 0
+
+.modal-login
+  width: 320px
+  margin: 110px auto 0
+
+.modal-alerts
+  width: 510px
+  top: 40%
+  margin: -30px auto 0
+  .modal-body
+    padding: 10px
+    .alerts-icon
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 70px
+      -webkit-border-radius: 5px 0 0 5px
+      -moz-border-radius: 5px 0 0 5px
+      -o-border-radius: 5px 0 0 5px
+      border-radius: 5px 0 0 5px
+    .alerts-text
+      padding-left: 80px
+      h3
+        margin: 0 0 5px
+        font-weight: 600
+      p
+        font-size: 12px
+        margin: 0
+      .send-email
+        float: right
+        width: 175px
+        position: relative
+        padding-right: 40px
+        input
+          width: 100%
+          padding: 1px 5px
+          float: left
+          font-size: 12px
+          border: 1px solid #0f75bc
+          -webkit-border-radius: 2px 0 0 2px
+          -moz-border-radius: 2px 0 0 2px
+          -o-border-radius: 2px 0 0 2px
+          border-radius: 2px 0 0 2px
+        .button
+          position: absolute
+          top: 0
+          bottom: 0
+          right: 0
+          width: 40px
+          height: 24px
+          color: #fff
+          font-size: 12px
+          padding: 3px 0 4px
+          border: none
+          background-color: #0f75bc
+          text-decoration: none
+          -webkit-border-radius: 0 2px 2px 0
+          -moz-border-radius: 0 2px 2px 0
+          -o-border-radius: 0 2px 2px 0
+          border-radius: 0 2px 2px 0
+          text-shadow: 0 1px 2px #0b5486
+
+.modal-alert-succes
+  .alerts-icon
+    background: #95ae23 url('../images/i_succes.png') no-repeat 50% 50%
+  .alerts-text
+    h3, a
+      color: #95ae23
+
+.modal-alert-error
+  .alerts-icon
+    background: #ae2d23 url('../images/i_error.png') no-repeat 50% 50%
+
+  .alerts-text
+    h3, a
+      color: #ae2d23
+
+.modal-alert-recovery
+  .alerts-icon
+    background: #0f75bc url('../images/i_recovery.png') no-repeat 50% 50%
+  .alerts-text
+    h3, a
+      color: #0f75bc
+
+.modal-message
+  width: 510px
+  top: 40%
+  margin: -30px auto 0
+  .modal-body
+    padding: 0
+    h3
+      padding: 10px 20px
+      background-color: #e3f6fd
+      -webkit-border-radius: 5px 5px 0 0
+      -moz-border-radius: 5px 5px 0 0
+      -o-border-radius: 5px 5px 0 0
+      border-radius: 5px 5px 0 0
+    .textarea-group
+      padding: 0 19px 19px
+      label
+        display: block
+
+      textarea
+        width: 100%
+        height: 100px
+        resize: none
+        padding: 10px
+        border: 1px solid #dbdee1
+        background-color: #fff
+        -webkit-border-radius: 4px
+        -moz-border-radius: 4px
+        -o-border-radius: 4px
+        border-radius: 4px
+    .button
+      margin: 0 19px 19px 0
+
+/*__________________________________________________________________________ Checkbox Styles        */
+
+label
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+input[type=checkbox].css-checkbox
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+input[type=checkbox].css-checkbox + label.css-label
+  padding-left: 20px
+  height: 15px
+  display: inline-block
+  line-height: 15px
+  background-position: 0 2px
+  vertical-align: middle
+  cursor: pointer
+  font-size: 12px
+
+input[type=checkbox].css-checkbox:checked + label.css-label
+  background-position: 0 -29px
+
+.css-label
+  background: url('../images/checkbox.png') no-repeat 0 0
+
+.error-group
+  input[type=checkbox].css-checkbox + label.css-label
+    background-position: 0 -60px
+  input[type=checkbox].css-checkbox + label.css-label
+    background-position: 0 2px
+  input[type=checkbox].css-checkbox:checked + label.css-label
+    background-position: 0 -29px
+
+.display-checkbox-group
+  margin-bottom: 10px
+
+input[type=checkbox].display-checkbox
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+input[type=checkbox].display-checkbox + label.display-label
+  padding-left: 80px
+  display: inline-block
+  line-height: 32px
+  background-position: -67px 2px
+  font-size: 18px
+  vertical-align: middle
+  cursor: pointer
+
+input[type=checkbox].display-checkbox:checked + label.display-label
+  background-position: 0 -67px
+
+.display-label
+  background: url('../images/checkbox_big.png') no-repeat -67px 2px
+
+.anonimus-checkbox-group
+  margin-top: 10px
+  span
+    display: inline-block
+    width: 23px
+    height: 23px
+    margin: 0 0 -6px 5px
+    cursor: default
+    background: url('../images/anonimus_help.png') no-repeat 0 0
+
+input[type=checkbox].anonimus-checkbox
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+input[type=checkbox].anonimus-checkbox + label.anonimus-label
+  padding-left: 30px
+  display: inline-block
+  line-height: 20px
+  background-position: 0 0
+  font-size: 16px
+  color: #fff
+  text-shadow: 0 0 2px #000
+  vertical-align: middle
+  cursor: pointer
+
+input[type=checkbox].anonimus-checkbox:checked + label.anonimus-label
+  background-position: 0 -40px
+
+.anonimus-label
+  background: url('../images/checkbox_anonimus.png') no-repeat 0 0
+
+/*__________________________________________________________________________ Buttons        */
+
+.button
+  position: relative
+  display: inline-block
+  font-weight: normal
+  text-align: center
+  vertical-align: middle
+  cursor: pointer
+  background-image: none
+  border: 1px solid transparent
+  white-space: nowrap
+  padding: 6px 12px
+  font-size: 14px
+  line-height: 1.42857143
+  border-radius: 4px
+  margin-bottom: 5px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.btn-block
+  display: block
+  width: 100%
+
+.btn-lg
+  padding: 11px 30px
+  font-size: 16px
+  line-height: 1.33
+  border-radius: 6px
+
+.btn-md
+  padding: 7px 20px
+  font-size: 13px
+  font-weight: 600
+  line-height: 1.5
+  border-radius: 3px
+
+.btn-sm
+  padding: 2px 17px
+  font-size: 12px
+  line-height: 1.5
+  border-radius: 3px
+
+.btn-left:before
+  position: absolute
+  left: -13px
+  top: -1px
+  width: 18px
+  height: 47px
+  content: ""
+  background: url('../images/btn_left.png') no-repeat 0 0
+
+.btn-right:before
+  position: absolute
+  right: -13px
+  top: -1px
+  width: 18px
+  height: 47px
+  content: ""
+  background: url('../images/btn_right.png') no-repeat 0 0
+
+.btn-left:hover:before
+  background: url('../images/btn_left_hover.png') no-repeat 0 0
+
+.btn-right:hover:before
+  background: url('../images/btn_right_hover.png') no-repeat 0 0
+
+.btn-lg.btn-right
+  margin-right: 13px
+  padding: 11px 20px 11px 30px
+
+.btn-lg.btn-left
+  margin-left: 13px
+  padding: 11px 30px 11px 20px
+
+.button-icon
+  width: 19px
+  height: 19px
+  margin: 0 6px -5px
+  display: inline-block
+
+.icon-key
+  background: url('../images/i_key.png') no-repeat 0 0
+
+.icon-facebook
+  background: url('../images/i_facebook.png') no-repeat 0 0
+
+.icon-sign-in
+  background: url('../images/i_sign_in.png') no-repeat 0 0
+
+.icon-next
+  width: 16px
+  height: 16px
+  margin: 0 6px -2px
+  background: url('../images/i_next.png') no-repeat 0 0
+
+.icon-prev
+  width: 16px
+  height: 16px
+  margin: 0 6px -2px
+  background: url('../images/i_prev.png') no-repeat 0 0
+
+.icon-publish
+  width: 16px
+  height: 16px
+  margin: 0 6px -2px
+  background: url('../images/i_publish.png') no-repeat 0 0
+
+.icon-share
+  width: 16px
+  height: 16px
+  margin: 0 6px -2px
+  background: url('../images/i_share.png') no-repeat 0 0
+
+.btn-blue
+  color: #fff
+  border: 1px solid #105788
+  text-decoration: none
+  background: #147ec1
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE0N2VjMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZDZiYjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #147ec1 0%, #0d6bb4 100%)
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #147ec1), color-stop(100%, #0d6bb4))
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #147ec1 0%, #0d6bb4 100%)
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #147ec1 0%, #0d6bb4 100%)
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #147ec1 0%, #0d6bb4 100%)
+  /* IE10+ */
+  background: linear-gradient(to bottom, #147ec1 0%, #0d6bb4 100%)
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#147ec1', endColorstr='#0d6bb4', GradientType=0)
+  /* IE6-8 */
+  -webkit-box-shadow: inset 0 1px 0px 0px #34a6d7, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0px 0px #34a6d7, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0px 0px #34a6d7, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  &:hover
+    background: #427aaa
+
+.btn-blue-lights
+  color: #fff
+  text-decoration: none
+  border: 1px solid #159bc7
+  background: #24bcec
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI0YmNlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxOGFmZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #24bcec 0%, #18afe8 100%)
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #24bcec), color-stop(100%, #18afe8))
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #24bcec 0%, #18afe8 100%)
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #24bcec 0%, #18afe8 100%)
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #24bcec 0%, #18afe8 100%)
+  /* IE10+ */
+  background: linear-gradient(to bottom, #24bcec 0%, #18afe8 100%)
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#24bcec', endColorstr='#18afe8', GradientType=0)
+  /* IE6-8 */
+  -webkit-box-shadow: inset 0 1px 0px 0px #4fd3f4, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0px 0px #4fd3f4, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0px 0px #4fd3f4, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  &:hover
+    background: #3dbee9
+
+.btn-orange
+  color: #fff
+  text-decoration: none
+  border: 1px solid #ca4e2a
+  background: #ea704b
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhNzA0YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNTVlM2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #ea704b 0%, #e55e3a 100%)
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ea704b), color-stop(100%, #e55e3a))
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ea704b 0%, #e55e3a 100%)
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ea704b 0%, #e55e3a 100%)
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ea704b 0%, #e55e3a 100%)
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ea704b 0%, #e55e3a 100%)
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea704b', endColorstr='#e55e3a', GradientType=0)
+  /* IE6-8 */
+  -webkit-box-shadow: inset 0 1px 0px 0px #f19b7a, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0px 0px #f19b7a, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0px 0px #f19b7a, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  &:hover
+    background: #eb7d5c
+
+.btn-green
+  color: #fff
+  text-decoration: none
+  border: 1px solid #165a39
+  background: #0e8549
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBlODU0OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNTk1NWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #0e8549 0%, #15955a 100%)
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0e8549), color-stop(100%, #15955a))
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #0e8549 0%, #15955a 100%)
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #0e8549 0%, #15955a 100%)
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #0e8549 0%, #15955a 100%)
+  /* IE10+ */
+  background: linear-gradient(to bottom, #0e8549 0%, #15955a 100%)
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0e8549', endColorstr='#15955a', GradientType=0)
+  /* IE6-8 */
+  -webkit-box-shadow: inset 0 1px 0px 0px #38b789, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0px 0px #38b789, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0px 0px #38b789, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  &:hover
+    background: #38a771
+
+.btn-green-lights
+  color: #fff
+  text-decoration: none
+  border: 1px solid #98b410
+  background: #b8cf4b
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I4Y2Y0YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYmM1M2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #b8cf4b 0%, #abc53a 100%)
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b8cf4b), color-stop(100%, #abc53a))
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #b8cf4b 0%, #abc53a 100%)
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #b8cf4b 0%, #abc53a 100%)
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #b8cf4b 0%, #abc53a 100%)
+  /* IE10+ */
+  background: linear-gradient(to bottom, #b8cf4b 0%, #abc53a 100%)
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8cf4b', endColorstr='#abc53a', GradientType=0)
+  /* IE6-8 */
+  -webkit-box-shadow: inset 0 1px 0px 0px #d1e07a, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0px 0px #d1e07a, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0px 0px #d1e07a, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  &:hover
+    background: #bacf5b
+
+.btn-red
+  color: #fff
+  text-decoration: none
+  border: 1px solid #ab3a3a
+  background: #e95555
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5NTU1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNDQ0NDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #e95555 0%, #e44444 100%)
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e95555), color-stop(100%, #e44444))
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e95555 0%, #e44444 100%)
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e95555 0%, #e44444 100%)
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e95555 0%, #e44444 100%)
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e95555 0%, #e44444 100%)
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e95555', endColorstr='#e44444', GradientType=0)
+  /* IE6-8 */
+  -webkit-box-shadow: inset 0 1px 0px 0px #f18484, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0px 0px #f18484, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0px 0px #f18484, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  &:hover
+    background: #e66464
+
+.btn-yellow
+  color: #fff
+  text-decoration: none
+  border: 1px solid #d79703
+  background: #fac641
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYzY0MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmOWJiMzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #fac641 0%, #f9bb31 100%)
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fac641), color-stop(100%, #f9bb31))
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fac641 0%, #f9bb31 100%)
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fac641 0%, #f9bb31 100%)
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fac641 0%, #f9bb31 100%)
+  /* IE10+ */
+  background: linear-gradient(to bottom, #fac641 0%, #f9bb31 100%)
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fac641', endColorstr='#f9bb31', GradientType=0)
+  /* IE6-8 */
+  -webkit-box-shadow: inset 0 1px 0px 0px #fbda72, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: inset 0 1px 0px 0px #fbda72, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: inset 0 1px 0px 0px #fbda72, 0 1px 1px 0px rgba(0, 0, 0, 0.3)
+  &:hover
+    background: #eabf5c
+
+/*__________________________________________________________________________ Slider        */
+
+#slider
+  background: url('../images/slider_bg.jpg') no-repeat center -175px fixed
+  .container
+    min-height: 232px
+    padding: 30px 0 20px
+    h1
+      color: #fff
+      text-align: center
+      margin-bottom: 20px
+    h4
+      text-align: center
+      color: #fff
+      font-weight: 400
+      a
+        color: #fff
+    .ask-question
+      position: relative
+      margin-bottom: 30px
+      padding-right: 60px
+      // width: 797px
+      .mywords
+        position: absolute
+        left: 4%
+        top: 12px
+        font-size: 24px
+        font-family: 'Open Sans', sans-serif
+        font-weight: 300
+      input[type="text"]
+        float: left
+        background-color: #fff
+        border: none
+        font-family: 'Open Sans', sans-serif
+        font-weight: 300
+        font-size: 24px
+        line-height: 28px
+        height: 46px
+        padding: 8px 4%
+        width: 100%
+        -webkit-border-radius: 40px 0 0 40px
+        -moz-border-radius: 40px 0 0 40px
+        -o-border-radius: 40px 0 0 40px
+        border-radius: 40px 0 0 40px
+
+      input[type="submit"]
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        border: none
+        width: 60px
+        height: 46px
+        background: #21649c url('../images/arrow.png') no-repeat center center
+        -webkit-border-radius: 0 40px 40px 0
+        -moz-border-radius: 0 40px 40px 0
+        -o-border-radius: 0 40px 40px 0
+        border-radius: 0 40px 40px 0
+        &:hover
+          background: #427aaa url('../images/arrow.png') no-repeat center center
+
+.label-danger
+  left: 50% !important
+  margin-left: -33px
+  padding: 3px
+  color: #fff
+  background-color: red
+
+.label-success
+  left: 50% !important
+  margin-left: -33px
+  padding: 3px
+  color: #fff
+  background-color: green
+
+.step-navigation
+  width: 500px
+  padding-left: 12px
+  margin: 0 auto 50px
+  height: 11px
+  background: url('../images/step_nav.png') no-repeat 0 0
+  .active-step
+    float: left
+    width: 122px
+    height: 11px
+    background: url('../images/step_nav_active.png') no-repeat 0 0
+  .complete-step
+    float: left
+    width: 122px
+    height: 11px
+    background: url('../images/step_nav_complete.png') no-repeat 0 0
+  .step-titles
+    width: 500px
+    margin-left: -12px
+    clear: both
+    position: relative
+    span
+      position: absolute
+      top: 0
+      font-size: 11px
+      opacity: 0.5
+      color: #fff
+      white-space: nowrap
+    .step-white
+      opacity: 1
+    .step-1
+      left: -42px
+    .step-2
+      left: 83px
+    .step-3
+      left: 223px
+    .step-4
+      left: 351px
+    .step-5
+      left: 471px
+
+.step-buttons
+  text-align: center
+  .btn-blue, .btn-blue-lights
+    padding: 8px 30px 7px 24px
+  .btn-green
+    padding: 8px 24px 7px 30px
+
+/*__________________________________________________________________________ Author      */
+
+#author
+  background-color: #fff
+  .container
+    padding: 10px 0
+    table
+      width: 100%
+      border: none
+      td
+        text-align: center
+        padding: 3px 0
+      thead td
+        font-size: 12px
+        text-transform: uppercase
+      tbody td
+        font-size: 20px
+        font-weight: 600
+        color: #0f75bc
+// .edit-profile
+//   float: right
+//   padding: 5px 15px
+//   font-size: 16px
+//   font-weight: 600
+//   line-height: 20px
+//   margin-top: 8px
+//   color: #959595
+//   text-transform: uppercase
+//   text-decoration: none
+//   border: 2px solid #ccc
+//   -webkit-border-radius: 5px
+//   -moz-border-radius: 5px
+//   -o-border-radius: 5px
+//   border-radius: 5px
+//   &:hover
+//     color: #737373
+
+.author-in
+  .author-in-image
+    float: left
+    width: 140px
+    height: 140px
+    margin: -120px 0 15px
+    padding: 2px 4px 4px 2px
+
+    img
+      -webkit-border-radius: 7px
+      -moz-border-radius: 7px
+      -o-border-radius: 7px
+      border-radius: 7px
+  .author-in-image-male
+    background: url('../images/authors_bg_big_male.png') no-repeat 0 0
+  .author-in-image-female
+    background: url('../images/authors_bg_big_female.png') no-repeat 0 0
+  .author-in-name
+    font-size: 18px
+    font-weight: 600
+    color: #737373
+    margin: 0 0 10px 5px
+  .author-in-sex,
+  .author-in-adrress,
+  .author-in-registration
+    margin: 0 0 5px 5px
+    font-size: 13px
+    .glyphicon
+      float: left
+      color: #0f75bc
+      margin-right: 8px
+      font-size: 16px
+  .author-in-registration
+    margin: 0 0 15px 5px
+  .author-in-buttons
+    clear: both
+    .button
+      margin-bottom: 10px
+  .author-in-socials
+    border-top: 1px solid #dbdee1
+    padding-top: 8px
+    margin-bottom: 10px
+    clear: both
+    width: 140px
+    a
+      display: inline-block
+      width: 16px
+      height: 16px
+      margin-right: 8px
+      background: url('../images/i_socials.png') no-repeat
+      &:last-child
+        margin: 0
+    .facebook
+      background-position: 0 0
+    .twitter
+      background-position: -26px 0
+    .youtube
+      background-position: -51px 0
+    .googleplus
+      background-position: -77px 0
+    .myspace
+      background-position: -102px 0
+
+/*__________________________________________________________________________ Body      */
+
+// .container
+//   position: relative
+//   p
+//     line-height: 22px
+//     margin-bottom: 20px
+//   ul, ol
+//     margin-bottom: 20px
+
+#body
+  margin-top: 20px
+  .container
+    min-height: 450px
+
+.sidebar-block
+  border: 1px solid #dbdee1
+  background-color: #fff
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+  margin-bottom: 20px
+  h6
+    padding: 10px 0
+    color: #0f75bc
+    margin: 0
+    text-align: center
+    background-color: #e8eff5
+    -webkit-border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -o-border-radius: 5px 5px 0 0
+    border-radius: 5px 5px 0 0
+
+.authors-list
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    padding: 10px
+    border-top: 1px solid #dbdee1
+    .authors-image
+      float: left
+      width: 52px
+      height: 52px
+      padding: 2px 4px 4px 2px
+      margin-right: 10px
+
+      a
+        display: block
+        width: 46px
+        height: 46px
+        img
+          -webkit-border-radius: 3px
+          -moz-border-radius: 3px
+          -o-border-radius: 3px
+          border-radius: 3px
+
+    .authors-image-male
+      background: url('../images/authors_bg_small_male.png') no-repeat 0 0
+    .authors-image-female
+      background: url('../images/authors_bg_small_female.png') no-repeat 0 0
+    .authors-info
+      float: left
+      width: 136px
+      margin-top: 5px
+      p
+        margin: 0
+        a
+          font-weight: 600
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+      .authors-name a
+        color: #737373
+      .authors-links
+        font-size: 10px
+        font-weight: 600
+        color: #737373
+        a
+          font-size: 10px
+          color: #737373
+          &:hover
+            color: #164c87
+          span
+            color: #164c87
+    .close
+      display: none
+  li:last-child
+    text-align: center
+
+.questions-list
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    padding: 10px
+    border-top: 1px solid #dbdee1
+    a
+      display: block
+      font-size: 11px
+      line-height: 15px
+      text-decoration: none
+      color: #595959
+      &:hover
+        text-decoration: underline
+        font-weight: 600
+    .text-center
+      font-size: 14px
+      color: #0f75bc
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+        font-weight: 400
+
+.trends-list
+  list-style: none
+  padding: 15px
+  margin: 0
+  a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.filters
+  padding: 5px 0
+  border-bottom: 1px solid #dbdee1
+  margin-bottom: 20px
+  button
+    border: none
+    background: none
+  .is-checked
+    color: #0f75bc !important
+  .more
+    padding: 0 6px
+    position: relative
+    display: inline-block
+    .open-more
+      cursor: pointer
+      padding-right: 15px
+      background: url('../images/arrow2.png') no-repeat right 9px
+    .more-dropdown, .more-dropdown-mobile
+      list-style: none
+      position: absolute
+      display: none
+      top: 22px
+      left: 6px
+      width: 130px
+      padding: 5px 0
+      margin: 0
+      z-index: 100
+      border: 1px solid #dbdee1
+      background-color: #fff
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+      -o-border-radius: 4px
+      border-radius: 4px
+      -webkit-box-shadow: 0 1px 7px -3px #bbb
+      -moz-box-shadow: 0 1px 7px -3px #bbb
+      box-shadow: 0 1px 7px -3px #bbb
+      button
+        color: #595959
+        width: 100%
+        padding: 0 10px
+        text-align: left
+        &:hover
+          background-color: #e7e9ea
+
+  .search-box
+    float: right
+    border-left: 1px solid #dbdee1
+    .input-submit
+      float: right
+      padding: 0 10px 0 0
+      font-size: 18px
+      margin-left: 10px
+      color: #164c87
+    .input-text
+      float: right
+      width: 0
+      padding: 0
+      border: none
+      background: none
+
+.desktop-filters
+  display: block
+
+.mobile-filters, .tablet-filters
+  display: none
+
+.post-container
+  margin-right: -20px
+
+.item-post
+  float: left
+  width: 220px
+  margin: 0 0 20px 0
+  border: 1px solid #dbdee1
+  background-color: #fff
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+  .item-post-image
+    height: 150px
+    -webkit-border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -o-border-radius: 5px 5px 0 0
+    border-radius: 5px 5px 0 0
+    a
+      display: block
+      position: relative
+      -webkit-border-radius: 5px 5px 0 0
+      -moz-border-radius: 5px 5px 0 0
+      -o-border-radius: 5px 5px 0 0
+      border-radius: 5px 5px 0 0
+      img
+        -webkit-border-radius: 5px 5px 0 0
+        -moz-border-radius: 5px 5px 0 0
+        -o-border-radius: 5px 5px 0 0
+        border-radius: 5px 5px 0 0
+  .item-post-empty
+    height: 9px
+    margin: -1px -1px 1px -1px
+    background-color: #b3cb41
+    -webkit-border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -o-border-radius: 5px 5px 0 0
+    border-radius: 5px 5px 0 0
+  .item-post-body
+    margin: 14px
+    max-height: 220px
+    overflow: hidden
+    a
+      font-size: 18px
+      line-height: 24px
+      font-weight: 400
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  .item-post-footer
+    border-top: 1px solid #dbdee1
+    margin: 14px
+    padding-top: 14px
+    span
+      float: left
+      font-size: 15px
+      margin-top: 1px
+
+.one-author
+  width: 100%
+  padding: 0 0 15px
+  margin: 0 0 11px
+  border-bottom: 1px solid #dbdee1
+  .author-image
+    float: left
+    width: 127px
+    height: 126px
+    padding: 2px 4px 4px 2px
+    margin: 8px 17px 7px 8px
+
+    a
+      display: block
+      width: 121px
+      height: 120px
+      img
+        -webkit-border-radius: 7px
+        -moz-border-radius: 7px
+        -o-border-radius: 7px
+        border-radius: 7px
+  .author-image-male
+    background: url('../images/authors_bg_male.png') no-repeat 0 0
+  .author-image-female
+    background: url('../images/authors_bg_female.png') no-repeat 0 0
+  .author-info
+    float: left
+    width: 160px
+    margin: 20px 20px 0 0
+    span
+      display: block
+      color: #737373
+      strong
+        font-weight: 600
+        color: #535353
+    .author-name
+      font-weight: 600
+      font-size: 18px
+      color: #2f2f2f
+      margin-bottom: 10px
+    .author-adrress,
+    .author-registration,
+    .author-last-online,
+    .author-online
+      font-size: 12px
+    .author-last-online, .author-online
+      margin-top: 20px
+      padding-top: 5px
+      border-top: 1px solid #dbdee1
+    .author-online
+      color: #37c057
+      font-weight: 600
+      border-top: 1px solid #37c057
+  .author-data
+    float: right
+    width: 340px
+    text-align: right
+    margin: 20px 0
+
+    .author-data-table
+      background-color: #fff
+      border: 1px solid #dbdee1
+      padding: 10px
+      margin-bottom: 10px
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      -o-border-radius: 5px
+      border-radius: 5px
+      table
+        width: 100%
+        border: none
+        td
+          text-align: center
+          padding: 3px 0
+        thead td
+          font-size: 12px
+          text-transform: uppercase
+        tbody td
+          font-size: 19px
+          font-weight: 600
+          color: #0f75bc
+    .button
+      margin: 0 0 10px 10px
+      .glyphicon
+        margin-right: 5px
+
+.one-minds
+  border-bottom: 1px solid #dbdee1
+  padding: 10px
+  .one-minds-author-image
+    float: left
+    margin-right: 10px
+    width: 76px
+    height: 76px
+    padding: 2px 4px 4px 2px
+
+    a
+      display: block
+      width: 70px
+      height: 70px
+      img
+        -webkit-border-radius: 5px
+        -moz-border-radius: 5px
+        -o-border-radius: 5px
+        border-radius: 5px
+  .one-minds-author-image-male
+    background: url('../images/authors_bg_mid_male.png') no-repeat 0 0
+  .one-minds-author-image-female
+    background: url('../images/authors_bg_mid_female.png') no-repeat 0 0
+  .one-minds-data
+    margin-top: 3px
+    .one-minds-author
+      font-weight: 600
+      margin-bottom: 10px
+    .one-minds-text
+      font-size: 19px
+      line-height: 23px
+      color: #737373
+      margin-bottom: 5px
+      a
+        color: #737373
+        text-decoration: none
+        &:hover
+          color: #0f75bc
+    .one-minds-footer
+      text-align: right
+      strong
+        font-weight: 600
+      .me-too
+        margin-left: 10px
+      a
+        font-size: 12px
+
+.fancybox:before, .fancybox-media:before
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  content: ""
+
+.fancybox:hover:before
+  background: url('../images/zoom_img.png') no-repeat 50% 50%
+
+.fancybox-media:hover:before
+  background: url('../images/zoom_media.png') no-repeat 50% 50%
+
+.one-mind-media
+  width: 220px
+  display: block
+  margin: 0 auto 20px
+  text-align: center
+  > a
+    display: block
+
+    position: relative
+    img
+      -webkit-border-radius: 5px 5px 0 0
+      -moz-border-radius: 5px 5px 0 0
+      -o-border-radius: 5px 5px 0 0
+      border-radius: 5px 5px 0 0
+  .one-mind-body a
+    padding: 10px
+    display: block
+    font-size: 13px
+    font-weight: 600
+    color: #595959
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.me-too
+  float: right
+  width: 66px
+  height: 22px
+  background: url('../images/me_too.png') no-repeat 0 0
+  &:hover
+    background-position: 0 -30px
+
+.how-it-work-block
+  text-align: center
+  margin-bottom: 50px
+  // color: #111921
+  .line
+    width: 140px
+    height: 1px
+    display: block
+    margin: 25px auto 0
+    background-color: #90b1cd
+  .icon-1, .icon-2, .icon-3, .icon-4, .icon-5
+    display: inline-block
+    width: 80px
+    height: 80px
+    margin-bottom: 15px
+  .icon-1
+    background: url('../images/icon1.png') no-repeat 0 0
+  .icon-2
+    background: url('../images/icon2.png') no-repeat 0 0
+  .icon-3
+    background: url('../images/icon3.png') no-repeat 0 0
+  .icon-4
+    background: url('../images/icon4.png') no-repeat 0 0
+  .icon-5
+    background: url('../images/icon5.png') no-repeat 0 0
+
+.error-404
+  padding-left: 330px
+  background: url('../images/error_404.png') no-repeat 0 0
+
+.divider
+  clear: both
+  float: none
+  height: 1px
+  background-color: #dbdee1
+  margin-bottom: 30px
+
+blockquote.left
+  float: left
+  width: 33%
+
+blockquote.right
+  float: right
+  width: 33%
+
+.align-left
+  float: left
+  margin: 0 20px 30px 0
+
+.align-right
+  float: right
+  margin: 0 0 30px 20px
+
+.question, .answer
+  padding: 0 0 0 38px
+  position: relative
+  background: url('../images/i_question_answer.png') no-repeat
+
+.question
+  font-size: 17px
+  margin-bottom: 10px
+  background-position: -30px 0
+
+.answer
+  color: #727272
+  margin-bottom: 30px
+  background-position: 0 -32px
+
+.textarea-description, .textarea-url, .textarea-file
+  position: relative
+  margin-bottom: 40px
+  textarea
+    resize: none
+    font-size: 11px
+    line-height: 15px
+    border: 1px solid #dbdee1
+    height: 100px
+    padding: 5px
+    font-weight: 600
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    -o-border-radius: 5px
+    border-radius: 5px
+  span
+    position: absolute
+    bottom: 2px
+    left: 1px
+    right: 1px
+    font-size: 11px
+    padding: 2px 0
+    text-align: center
+    background-color: #fff
+    -webkit-border-radius: 0 0 4px 4px
+    -moz-border-radius: 0 0 4px 4px
+    -o-border-radius: 0 0 4px 4px
+    border-radius: 0 0 4px 4px
+
+.textarea-description textarea
+  width: 460px
+  background-color: #fff
+
+.textarea-url
+  float: left
+  width: 220px
+  margin-right: 20px
+  textarea
+    width: 220px
+    color: #fff
+
+    background: #abdac3 url('../images/i_link.png') no-repeat 50% 50%
+
+.textarea-file
+  float: left
+  width: 220px
+  textarea
+    width: 220px
+    color: #fff
+    background: #a3c7d1 url('../images/i_file.png') no-repeat 50% 50%
+
+.step-h
+  font-size: 42px
+  font-weight: 700
+  color: #dcdcdc
+  text-align: center
+
+/*__________________________________________________________________________ One Mind      */
+
+.one-mind
+  position: relative
+  padding: 30px 20px 15px
+  background-color: #fff
+  margin-bottom: 20px
+  border: 1px solid #dbdee1
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+  .one-mind-line
+    position: absolute
+    top: -1px
+    left: -1px
+    right: -1px
+    height: 9px
+    background-color: #b3cb41
+    -webkit-border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -o-border-radius: 5px 5px 0 0
+    border-radius: 5px 5px 0 0
+  .one-mind-text
+    font-size: 20px
+    padding: 0 10px
+    line-height: 24px
+    color: #0f75bc
+    margin-bottom: 30px
+  .one-mind-description
+    padding: 0 10px 10px
+    margin-bottom: 15px
+    border-bottom: 1px solid #dbdee1
+  .one-mind-socials
+    float: left
+  .one-mind-buttons
+    float: right
+    a
+      float: left
+      color: #595959
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+    .me-too
+      margin: -2px 0 0 10px
+
+.comments
+  position: relative
+  margin-bottom: 20px
+  background-color: #fff
+  border: 1px solid #dbdee1
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+  h3
+    padding: 10px 19px
+    color: #0f75bc
+    font-size: 14px
+    margin: 0
+  .comment
+    border-top: 1px solid #dbdee1
+    padding: 19px 19px 0
+    .user-avatar
+      float: left
+      width: 52px
+      height: 52px
+      padding: 2px 4px 4px 2px
+
+      a
+        display: block
+        width: 46px
+        height: 46px
+        img
+          -webkit-border-radius: 3px
+          -moz-border-radius: 3px
+          -o-border-radius: 3px
+          border-radius: 3px
+    .user-avatar-male
+      background: url('../images/authors_bg_small_male.png') no-repeat 0 0
+    .user-avatar-female
+      background: url('../images/authors_bg_small_female.png') no-repeat 0 0
+    .user-text
+      margin: 0 0 19px 71px
+      position: relative
+      .user-name
+        color: #595959
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+      .user-meta
+        position: absolute
+        top: 2px
+        right: 0
+        font-size: 10px
+        a
+          color: #595959
+          text-decoration: none
+          &:hover
+            color: #0f75bc
+      .user-comment
+        font-size: 11px
+        margin: 10px 0
+      .comment-options
+        float: right
+        a
+          float: left
+          color: #595959
+          text-decoration: none
+          margin-left: 20px
+          padding-left: 25px
+          background: url('../images/options.png') no-repeat
+          &:hover
+            text-decoration: underline
+        .like
+          background-position: 0 3px
+        .dislike
+          background-position: -22px -22px
+        .report
+          background-position: -49px -45px
+  .children
+    padding-left: 54px
+    background: url('../images/comment_child.png') no-repeat 20px 25px
+    .comment
+      padding: 19px 0 0
+
+.respond-form
+  position: relative
+  padding: 19px 0 19px 19px
+  margin-bottom: 20px
+  background-color: #fff
+  border: 1px solid #dbdee1
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+  label
+    display: block
+    margin-right: 19px
+  .textarea-group
+    clear: both
+    margin-bottom: 20px
+    textarea
+      width: 500px
+      height: 100px
+      resize: none
+      padding: 10px
+      margin-right: 19px
+      border: 1px solid #dbdee1
+      background-color: #fff
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+      -o-border-radius: 4px
+      border-radius: 4px
+  .align-right
+    margin: 0 19px 0 0
+
+/*__________________________________________________________________________ Toggle      */
+
+// .toggle-block
+
+.toggle
+  border: 1px solid #dbdee1
+  margin-bottom: 20px
+  background-color: #fff
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  -o-border-radius: 5px
+  border-radius: 5px
+
+  .trigger-button
+    position: relative
+    clear: both
+    color: #0f75bc
+    font-size: 17px
+    line-height: 21px
+    display: block
+    padding: 7px 38px 6px 19px
+    *zoom: 1
+    text-decoration: none
+
+  .trigger-button span
+    position: absolute
+    top: 6px
+    right: 6px
+    height: 22px
+    width: 22px
+    background: url('../images/plus_minus.png') no-repeat 0 0
+
+  .trigger-button.active span
+    background-position: 0px -57px
+
+  .trigger-content
+    display: none
+    padding: 19px
+
+/*__________________________________________________________________________ Tabs      */
+
+.tabs
+  clear: both
+  display: block
+  margin-bottom: 20px
+  .tabNavigation
+    padding: 0 20px
+    margin: 0
+    list-style: none
+    border: 1px solid #dbdee1
+    -webkit-border-radius: 5px 5px 0 0
+    -moz-border-radius: 5px 5px 0 0
+    -o-border-radius: 5px 5px 0 0
+    border-radius: 5px 5px 0 0
+    background-color: #fff
+    li
+      float: left
+      text-align: center
+      margin: 8px 0
+      color: #787878
+      a
+        color: #787878
+        text-decoration: none
+        position: relative
+        z-index: 2
+        [class^="icon-"], [class*=" icon-"]
+          font-size: 26px
+          padding: 4px
+          color: inherit
+          display: inline-block
+    .current
+      a
+        color: #0f75bc
+
+  .box
+    display: none
+  .visible
+    display: block
+  > div
+    background-color: #fff
+    border: 1px solid #dbdee1
+    border-top: none
+    display: block
+    position: relative
+    z-index: 1
+    -webkit-border-radius: 0 0 5px 5px
+    -moz-border-radius: 0 0 5px 5px
+    -o-border-radius: 0 0 5px 5px
+    border-radius: 0 0 5px 5px
+    p, ul, ol
+      margin-bottom: 10px
+
+.account-settings
+  .align-right
+    float: right
+  .button
+    margin-bottom: 0
+  h2
+    color: #293744
+    margin: -17px -19px 0
+    padding: 10px 19px
+    font-size: 14px
+    font-weight: 600
+    background-color: #d8e9f4
+    -webkit-border-radius: 4px 0 0 0
+    -moz-border-radius: 4px 0 0 0
+    -o-border-radius: 4px 0 0 0
+    border-radius: 4px 0 0 0
+
+  .tabNavigation
+    float: left
+    width: 160px
+    padding: 9px 19px
+    border-right: none
+    -webkit-border-radius: 5px 0 0 5px
+    -moz-border-radius: 5px 0 0 5px
+    -o-border-radius: 5px 0 0 5px
+    border-radius: 5px 0 0 5px
+    li
+      width: 100%
+      margin: 8px 0
+      text-align: left
+      a
+        font-size: 12px
+  > div
+    float: left
+    width: 540px
+    min-height: 300px
+    padding: 19px
+    border: 1px solid #dbdee1
+
+    -webkit-border-radius: 0 5px 5px 0
+    -moz-border-radius: 0 5px 5px 0
+    -o-border-radius: 0 5px 5px 0
+    border-radius: 0 5px 5px 0
+
+.author-image
+  position: relative
+  float: left
+  width: 140px
+  height: 140px
+  margin: 0 20px 0 0
+  padding: 2px 4px 4px 2px
+  background: url('../images/authors_bg_big.png') no-repeat 0 0
+  img
+    -webkit-border-radius: 7px
+    -moz-border-radius: 7px
+    -o-border-radius: 7px
+    border-radius: 7px
+  .change-avatar
+    display: none
+    position: absolute
+    color: #fff
+    text-decoration: none
+    font-size: 12px
+    padding: 5px 0 6px
+    text-align: center
+    bottom: 4px
+    left: 2px
+    right: 4px
+    background-color: rgba(0, 0, 0, .75)
+    -webkit-border-radius: 0 0 7px 7px
+    -moz-border-radius: 0 0 7px 7px
+    -o-border-radius: 0 0 7px 7px
+    border-radius: 0 0 7px 7px
+  &:hover .change-avatar
+    display: block
+
+.input-group
+  .help
+    position: absolute
+    right: 9px
+    bottom: 9px
+    width: 14px
+    height: 14px
+    background: url('../images/help.png') no-repeat 0 0
+
+.author-main-info
+  padding-bottom: 20px
+  .input-group
+    margin-top: 12px
+    width: 340px
+    label
+      float: left
+      width: 90px
+      color: #293744
+      font-weight: 600
+      margin: 6px 10px 0 0
+    input
+      float: left
+      width: 190px
+      padding: 5px 30px 5px 10px
+      margin-right: 10px
+      border: 1px solid #dbdee1
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+      -o-border-radius: 4px
+      border-radius: 4px
+    a
+      float: right
+      margin-top: 6px
+      width: 40px
+      color: #949ba1
+      font-size: 12px
+      font-weight: 600
+      text-decoration: none
+    // .author-input-edit
+    .author-input-save
+      display: none
+      color: #0f75bc
+    .help
+      right: 60px
+
+.author-password-info
+  border-top: 1px solid #dbdee1
+  padding: 20px 0
+  .input-group
+    float: left
+    width: 50%
+    position: relative
+
+  label
+    float: left
+    width: 78px
+    color: #293744
+    font-weight: 600
+    margin: 6px 10px 7px 0
+  .space
+    margin-left: 10px
+  input
+    float: right
+    width: 152px
+    padding: 5px 30px 5px 10px
+    border: 1px solid #dbdee1
+    -webkit-border-radius: 4px
+    -moz-border-radius: 4px
+    -o-border-radius: 4px
+    border-radius: 4px
+
+.author-social-info
+  h4
+    font-size: 12px
+    padding-bottom: 2px
+    color: #9f9e9e
+    margin-bottom: 20px
+    border-bottom: 1px solid #dbdee1
+  .input-group
+    margin-bottom: 20px
+    label
+      float: left
+      width: 100px
+      color: #293744
+      margin: 6px 10px 7px 0
+    input
+      float: left
+      width: 390px
+      padding: 5px 30px 5px 10px
+      border: 1px solid #dbdee1
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+      -o-border-radius: 4px
+      border-radius: 4px
+
+.accordion-block
+  margin-bottom: 20px
+  border: 1px solid #dbdee1
+  background-color: #fff
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  -o-border-radius: 4px
+  border-radius: 4px
+  h2
+    color: #293744
+    margin: 0
+    text-align: center
+    padding: 10px 19px
+    font-size: 20px
+    font-weight: 600
+    background-color: #d8e9f4
+    -webkit-border-radius: 4px 0 0 0
+    -moz-border-radius: 4px 0 0 0
+    -o-border-radius: 4px 0 0 0
+    border-radius: 4px 0 0 0
+  .trigger-button
+    font-size: 20px
+    line-height: 70px
+    font-weight: 600
+    color: #717274
+    display: block
+    clear: both
+    text-align: center
+    text-decoration: none
+    border-bottom: 1px solid #dbdee1
+  .trigger-content
+    clear: both
+    position: relative
+    display: none
+    padding: 15px
+    border-bottom: 1px solid #dbdee1
+    .button
+      margin-bottom: 0
+
+.mobile-account-settings
+  display: none
+
+/*__________________________________________________________________________ Footer      */
+
+#footer
+  position: fixed
+  left: 0
+  right: 0
+  z-index: 5
+  background-color: #1f1f1f
+  .container
+    padding: 10px 0
+    position: relative
+
+    p
+      margin: 0
+      font-size: 12px
+      color: #939393
+      a
+        color: #939393
+    .open-footer
+      position: absolute
+      z-index: 10
+      top: -32px
+      right: 30px
+      width: 67px
+      height: 32px
+      background: url('../images/footer_button.png') no-repeat 0 0
+    .open
+      background-position: 0 -32px
+    .socials
+      float: right
+      margin-right: 10px
+
+      a
+        float: right
+        width: 18px
+        height: 18px
+        position: relative
+        margin-left: 20px
+        background: url('../images/socials2.png') no-repeat
+        span
+          display: none
+          position: absolute
+          z-index: 20
+          content: ""
+          width: 65px
+          height: 27px
+          top: -28px
+          left: -17px
+          font-size: 11px
+          line-height: 20px
+          text-align: center
+          color: #fff
+          background: url('../images/tooltip.png') no-repeat
+
+      a:hover span
+        display: block
+
+      .facebook
+        background-position: 0 0
+      .twitter
+        background-position: -38px 1px
+      .rss
+        background-position: -76px 2px
+
+@media (max-width: 992px)
+  #slider .container form
+    width: 100%
+  .row
+    margin: 0
+    .row
+      margin: 0 -10px
+  .container
+    padding: 0
+  .author-in
+    .author-in-image
+      margin: -110px 10px 15px 0
+    .btn-block
+      width: auto
+    .author-in-name, .author-in-sex,
+    .author-in-adrress, .author-in-registration
+      margin-right: 10px
+      float: left
+    .author-in-socials
+      clear: none
+      border: none
+      padding-top: 2px
+  #footer .col-md-9, #footer .col-md-9
+    text-align: center
+  #footer .container .socials
+    display: none
+    float: none
+    margin-top: 5px
+    text-align: center
+    a
+      float: none
+      display: inline-block
+  #author
+    .col-md-7
+      margin-left: 170px
+  // .container .edit-profile
+  //   position: absolute
+  //   top: -120px
+  //   right: 0
+  //   border: 2px solid #fff
+  //   background-color: #fff
+  //   color: #737373
+  .account-settings
+    display: none
+  .mobile-account-settings
+    display: block
+  // .author-input-edit, .author-input-save
+  //   display: none
+
+  .respond-form
+    .textarea-group textarea
+      width: 100%
+      padding: 2%
+      margin: 0
+  .step-h
+    display: none
+  .textarea-description textarea, .textarea-url textarea, .textarea-file textarea
+    width: 100%
+    padding: 2%
+  .textarea-url, .textarea-file
+    width: 100%
+    margin-right: 0
+
+  .respond-form
+    padding: 19px
+    .align-right
+      margin: 0
+
+@media (max-width: 767px)
+  .modal-login
+    width: auto
+    margin: 10px
+  .modal-alerts
+    width: auto
+    margin: 10px
+
+  // #author
+  //   .container .edit-profile
+  //     right: 10px
+  .error-404
+    padding: 140px 0 0 0
+  #body
+    .container
+      min-height: inherit
+    #container
+      margin: 0
+    .one-author
+      .author-image
+        margin: 8px 17px 7px 0
+      .author-info
+        margin: 0 0 10px 0
+      .author-data
+        width: 100%
+        margin: 0
+
+    .right-sidebar .mobile-list
+      background-color: #7f7f7f
+      margin: 0 -10px
+      border: none
+      padding: 0 20px
+      -webkit-border-radius: 0
+      -moz-border-radius: 0
+      -o-border-radius: 0
+      border-radius: 0
+      h6
+        position: relative
+        background: none
+        color: #fff
+        font-size: 18px
+        font-weight: 700
+        text-shadow: 0 0 5px #000
+        -webkit-border-radius: 0
+        -moz-border-radius: 0
+        -o-border-radius: 0
+        border-radius: 0
+        cursor: pointer
+        span
+
+          display: inline-block
+          width: 28px
+          height: 27px
+          margin: 0 0 -8px 5px
+          background: url('../images/arrow_h.png') no-repeat 0 0
+      .authors-list
+        display: none
+        li
+          border-top: 1px solid #fff
+          a
+            color: #fff
+            text-decoration: none
+          .authors-info
+            color: #fff
+            .authors-name a, .authors-links a, .authors-links
+              color: #fff
+          .close
+            margin-left: 10px
+            display: inline-block
+
+  blockquote.left, blockquote.right
+    width: 50%
+
+  .tablet-filters
+    display: block
+  .mobile-filters, .desktop-filters
+    display: none
+
+  .respond-form
+    .textarea-group textarea
+      width: 100%
+      padding: 2%
+    .input-group
+      width: 100%
+      input
+        width: 100%
+        padding: 4px 2% 5px
+
+  .comments .comment .user-text .user-meta
+    position: relative
+
+  #slider .container
+    min-height: inherit
+  .step-navigation
+    display: none
+
+  .author-main-info
+    .author-image
+      margin-bottom: 10px
+    .input-group
+      clear: both
+
+  .author-in .author-in-name
+    margin: 0 0 45px 5px !important
+
+@media (max-width: 480px)
+  #body
+    .one-author
+      padding: 0 0 5px
+      .author-info
+        width: 127px
+      .author-image
+        margin: 8px 10px 7px 0
+      .author-data .author-data-table table thead td
+        text-transform: capitalize
+    .one-minds
+      .one-minds-data .one-minds-footer span
+        font-size: 12px
+    .author-in
+      .author-in-image
+        margin: 0 10px 10px 0
+      .author-in-buttons
+        clear: both
+        .button
+          float: left
+          margin: 0 10px 10px 0
+      .author-in-name, .author-in-sex,
+      .author-in-adrress, .author-in-registration
+        margin-right: 0
+        float: none
+    #container
+      min-height: inherit !important
+      .item-post
+        float: none !important
+        display: block !important
+        margin: 0 auto 20px !important
+        position: static !important
+  blockquote.left, blockquote.right
+    width: 100%
+
+  .modal-message
+    width: 100%
+  .mobile-filters
+    display: block
+    .search-box .input-text
+      font-size: 13px
+  .tablet-filters, .desktop-filters
+    display: none
+
+  .comments .comment .user-text .comment-options
+    float: left
+    a
+      margin: 0 10px 0 0
+
+  #author
+    .col-md-7
+      margin-left: 0
+      table thead td
+        text-transform: capitalize
+  .mobile-account-settings
+    .author-social-info .input-group input
+      width: 100%
+  .modal-alerts .modal-body .alerts-text .send-email
+    float: none
+    display: block
+
+  .author-main-info .input-group
+    width: 240px
+  // .author-main-info .input-group input
+  //   width: 182px
+  // .author-main-info .input-group .help
+  //   top: 34px
+  .author-social-info .input-group .help,
+  .author-password-info .help
+    top: 42px
+  #header .container .login-in .notifications .notifications-dropdown
+    width: 275px

@@ -1,0 +1,26 @@
+<form method="post" class="form-horizontal" action="#" enctype="multipart/form-data">
+
+    {% for FieldItem,Type in Fields %}
+        {% if Type != 'hidden' %}
+            <div class="form-group">
+            <div class="col-md-12">
+                <label class="control-label text-center">{{ FieldItem }}</label>
+            </div>
+        {% endif %}
+        <div class="col-md-12">
+            <input {% if Type == 'disabled' %}type="text" disabled="disabled"{% else %} type="{{ Type }}" {% endif %}
+                   name="{{ FieldItem }}" class="form-control"
+                   value="{% for Field, val in Data %}{% if Field == FieldItem %}{{ val }}{% endif %}{% endfor %}"/>
+
+
+        </div>
+        </div>
+    {% endfor %}
+
+
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input class="btn btn-primary" type="submit" value="Save"/>
+        </div>
+    </div>
+</form>

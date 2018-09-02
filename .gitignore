@@ -1,0 +1,16 @@
+.git
+/node_modules
+/vendor
+/vendor/*.*
+.idea
+# Uploads Directory
+/uploads
+/uploads/*.*
+
+
+
+
+
+
+
+
