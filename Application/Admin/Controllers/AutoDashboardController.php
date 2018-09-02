@@ -15,12 +15,8 @@ use System\MVC\CrudController;
 
 class AutoDashboardController extends Controller
 {
-
-
     function IndexAction()
     {
-
-
         // Make Nav Menu by scanning through Models folder
         $models = scandir(APP_PATH . '/Admin/Models');
         $param['NavMenu'] = array();
@@ -31,7 +27,6 @@ class AutoDashboardController extends Controller
                 array_push($param['NavMenu'], $m);
             }
         }
-
         if (!empty($param['NavMenu'])) {
             // show content according to get request
             if (!isset($_GET['menu_item'])) {
@@ -46,13 +41,11 @@ class AutoDashboardController extends Controller
             $param['NowItem'] = $menuItem;
             $param['TableHeading'] = array_keys($autoAdmin->GetFields());
 
-            $param['Url'] = BASE_URL . SECURE_ADMIN_FOLDER_NAME . '/' . $menuItem . '/';
+            $param['Url'] = BASE_URL . ADMIN_FOLDER_SECURE_NAME . '/' . $menuItem . '/';
             $autoAdmin->IndexAction(null, $param);
         } else {
             die ('No  Models Created So Far');
         }
     }
-
-
 }
 

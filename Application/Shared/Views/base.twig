@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>A21</title>
+    <title>{{ Shared.AppName }}</title>
     <link href="{{ BASE_URL }}includes/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="{{ BASE_URL }}includes/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="{{ BASE_URL }}includes/css/fancybox.css" rel="stylesheet" type="text/css"/>
@@ -65,21 +65,6 @@
 
     {% endblock %}
 </div>
-
-<script type="text/javascript">
-
-    $(function () {
-
-        $("img.lazy").lazyload({
-            event: "scrollstop",
-            threshold: 400,
-            placeholder: "{{ BASE_URL }}includes/images/lazyload-spin.gif",
-            effect: "fadeIn"
-        });
-    });
-
-</script>
-
 {% block script_content %}
 
 {% endblock %}

@@ -2,14 +2,12 @@
 
 namespace System\MVC;
 
-use Infrastructure\SessionVariables;
-use Repositories\UserOnlineRepository;
 use System\Core\Loader;
 
 abstract class Controller
 {
+    public $load;
     private static $instance;
-    protected $language;
 
     public function __construct()
     {
@@ -17,23 +15,18 @@ abstract class Controller
         $this->load = new Loader();
 
         if (!ob_get_status()) {
-
             if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
                 ob_start('ob_gzhandler');
             else
                 ob_start();
         }
-
-        $this->CheckOnline();
+        // calling it
+        $this->example();
     }
 
-    function CheckOnline()
+    // if you want function to be executed all over the app
+    private function example()
     {
-        if (isset($_SESSION[SessionVariables::$UserID]) && $_SESSION[SessionVariables::$UserID] > 0) {
-            $userOnlineRepository = new UserOnlineRepository();
-
-            $userOnlineRepository->UpdateOnlineTime($_SESSION[SessionVariables::$UserID]);
-        }
+        // example code
     }
-
 }

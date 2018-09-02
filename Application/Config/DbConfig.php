@@ -2,7 +2,7 @@
 
 namespace Application\Config;
 
-use WebInterface\Models\DatabaseConnection;
+use Shared\Model\DatabaseConnection;
 
 class DbConfig
 {
@@ -15,6 +15,6 @@ class DbConfig
         $this->databaseConnection->ServerName = 'localhost';
         $this->databaseConnection->Username = 'root';
         $this->databaseConnection->Password = '';
-        $this->databaseConnection->DatabaseName = '';
+        $this->databaseConnection->DatabaseName = 'products';
     }
 }

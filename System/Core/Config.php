@@ -1,18 +1,15 @@
 <?php
+
 namespace System\Core;
 
 class Config
 {
     private $config;
-    private $app;
-    private $db;
+
 
     function __construct()
     {
         $this->config = array();
-        $this->app = array();
-        $this->db = array();
-
         $this->initialize();
     }
 
@@ -23,14 +20,12 @@ class Config
      */
     private function initialize()
     {
-
-        $this->config['AdminFolderSecureName'] = "backoffice";
+        $this->config['AdminFolderSecureName'] = "bo";
         $this->config['AdminFolder'] = "Admin";
         $this->config['WebInterfaceFolder'] = "WebInterface";
         $this->config['isAdmin'] = false;
         $this->config['InterfaceDefaultRoute'] = array('Controller' => 'Home', 'Action' => 'Index');
         $this->config['AdminDefaultRoute'] = array('Controller' => 'AutoDashboard', 'Action' => 'Index');
-
     }
 
     function GetConfig()

@@ -1,6 +1,6 @@
 <?php
 
-namespace WebInterface\Models;
+namespace Shared\Model;
 
 class DatabaseConnection
 {
