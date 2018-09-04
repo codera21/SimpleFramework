@@ -4,63 +4,20 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{{ Shared.AppName }}</title>
-    <link href="{{ BASE_URL }}includes/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="{{ BASE_URL }}includes/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="{{ BASE_URL }}includes/css/fancybox.css" rel="stylesheet" type="text/css"/>
-    <link href="{{ BASE_URL }}includes/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
-    <link href="{{ BASE_URL }}includes/css/validationEngine.jquery.css" rel="stylesheet" type="text/css"/>
-
+    {# todo: in production replace most of the modules with cdns #}
+    <link rel="stylesheet" type="text/css" href="{{ MODULE }}bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ MODULE }}font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ BASE_URL }}includes/css/main.css"/>
     <script type="text/javascript">
         var BASE_URL = '{{ BASE_URL }}';
     </script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/jquery.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/bootstrap.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/jquery.fancybox-media.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/bootstrap-maxlength.min.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/bootstrap-typeahead.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/jquery.validationEngine.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/jquery.validationEngine-en.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/jquery.lazyload.min.js"></script>
-    <script type="text/javascript" src="{{ BASE_URL }}includes/js/ajaxGrid.js"></script>
-
-
-    <!--[if IE]>
-    <script src="{{ BASE_URL }}includes/js/html5.js"></script>
-    <link href="{{ BASE_URL }}includes/css/ie.css" rel="stylesheet" type="text/css"/>
-    <![endif]-->
-
-    <!--[if gte IE 9]>
-    <style type="text/css">
-        .gradient {
-            filter: none;
-        }
-    </style>
-    <![endif]-->
-
-
+    <script type="text/javascript" src="{{ MODULE }}jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="{{ MODULE }}popper.js/dist/umd/popper.js"></script>
+    <script type="text/javascript" src="{{ MODULE }}bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{{ BASE_URL }}includes/js/index.js"></script>
 </head>
 <body class="index-page">
-<!-- Confirmation Message-->
-<div class="modal fade" id="alerts1" role="dialog">
-    <div id="MessageTypeDiv" class="modal-dialog modal-alerts">
-        <div class="modal-content">
-            <div class="modal-body clearfix">
-                <div class="alerts-icon"></div>
-                <div class="alerts-text">
-                    <h3 id="MessageType">Success!</h3>
-
-                    <p id="Message"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<a href="#" data-toggle="modal" id="ConfirmationMessage" style="display: none" data-target="#alerts1">Click</a>
-
 <div class="wrapper">
-
-
     {% block content %}
 
     {% endblock %}

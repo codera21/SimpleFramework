@@ -1,0 +1,40 @@
+{
+  "name": "simpleframework",
+  "version": "1.0.0",
+  "description": "It is a MVC framwork made in PHP .\r ##Requirement \r Since I am using latest version of twig and it needs at least php 7.0. \r you will need what a typical php project will require.",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "compass": "^0.1.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "runserver": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codera21/SimpleFramework.git"
+  },
+  "author": "atul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codera21/SimpleFramework/issues"
+  },
+  "homepage": "https://github.com/codera21/SimpleFramework#readme",
+  "keywords": []
+}

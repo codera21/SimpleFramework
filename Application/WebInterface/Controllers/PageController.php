@@ -15,7 +15,13 @@ class PageController extends Controller
 {
     public function IndexAction()
     {
-        echo("Page/Index");
+
+
+        try {
+            $this->load->TwigView('Page/index');
+        } catch (\Exception $e) {
+            var_dump("Error :" . $e);
+        }
     }
 
 }

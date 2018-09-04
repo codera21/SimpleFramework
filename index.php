@@ -31,15 +31,12 @@ define('SYSTEM_FOLDER', 'System');
 
 define('LANG_FOLDER', 'Language');
 
-/*The path to the "Application" folder*/
+
 define('APP_PATH', APP_FOLDER);
 
 define('LANG_PATH', LANG_FOLDER);
 
-/*The path to the "System" folder*/
 define('SYSTEM_PATH', SYSTEM_FOLDER);
-
-define('INCLUDE_URL', BASE_URL . 'includes');
 
 require_once(SYSTEM_PATH . DS . 'Core/Bootstrap.php');
 

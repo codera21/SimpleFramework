@@ -1,4 +1,5 @@
 <?php
+
 namespace System\Core;
 
 use Infrastructure\TwigShared;
@@ -24,6 +25,7 @@ class Loader
             $twigTemplate = $twig->loadTemplate($filePath);
             $data["AppPath"] = APP_PATH . DS;
             $data["BASE_URL"] = BASE_URL;
+            $data["MODULE"] = BASE_URL . 'node_modules/';
             $data["SERVER"] = $_SERVER;
             $data["SESSION"] = $_SESSION;
             $data["COOKIE"] = $_COOKIE;
