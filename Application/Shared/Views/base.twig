@@ -4,10 +4,8 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{{ Shared.AppName }}</title>
-    {# todo: in production replace most of the modules with cdns #}
-    <!-- <link rel="stylesheet" type="text/css" href="{{ MODULE }}bootstrap/dist/css/bootstrap.css"/> -->
-    <link rel="stylesheet" type="text/css" href="{{ BASE_URL }}includes/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="{{ MODULE }}font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ MODULE }}bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="{{ BASE_URL }}includes/css/main.css"/>
     <script type="text/javascript">
         var BASE_URL = '{{ BASE_URL }}';
@@ -17,14 +15,13 @@
     <script type="text/javascript" src="{{ MODULE }}bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="{{ BASE_URL }}includes/js/index.js"></script>
 </head>
-<body class="index-page">
-<div class="wrapper">
+<body>
     {% block content %}
 
     {% endblock %}
-</div>
-{% block script_content %}
 
-{% endblock %}
+    {% block script_content %}
+
+    {% endblock %}
 </body>
 </html>
