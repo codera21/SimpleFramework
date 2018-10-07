@@ -1,6 +1,7 @@
 # SimpleFramework
-It is a MVC framwork made in PHP .
-##Requirement 
+It is a MVC framwork made in PHP.
+
+## Requirement 
 Since I am using latest version of twig and it needs at least php 7.0. 
 you will need what a typical php project will require. 
    
