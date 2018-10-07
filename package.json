@@ -10,7 +10,6 @@
     "popper.js": "^1.14.4"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.5",
     "compass": "^0.1.1",
     "del": "^3.0.0",
     "gulp": "^3.9.1",

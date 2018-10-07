@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ALL);
+
 function is_ssl()
 {
     if (isset($_SERVER['HTTPS'])) {
@@ -39,4 +40,3 @@ define('LANG_PATH', LANG_FOLDER);
 define('SYSTEM_PATH', SYSTEM_FOLDER);
 
 require_once(SYSTEM_PATH . DS . 'Core/Bootstrap.php');
-
