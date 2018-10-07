@@ -14,21 +14,17 @@ gulp.task('scripts', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('includes/js'));
-
 });
 
 /*
 * Sass Task
 */
-// if i wanna compile and compress the css
-//   sass({output_style: 'compressed'})
 gulp.task('sass', function () {
     gulp.src('includes/scss/main.scss')
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
         .pipe(auto_prefixer('last 2 versions'))
         .pipe(gulp.dest('includes/css/'));
-
 });
 
 /*
@@ -39,16 +35,6 @@ gulp.task('watch', function () {
     gulp.watch('includes/scss/**/*.scss', ['sass']);
   });
 
-
-
-
-  gulp.task('bs' , () => {
-    gulp.src('includes/scss/scss/bootstrap.scss')
-        .pipe(plumber())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(auto_prefixer('last 2 versions'))
-        .pipe(gulp.dest('includes/css/'));
-  });
 
 /*
 * Default Task
