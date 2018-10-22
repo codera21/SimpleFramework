@@ -162,6 +162,12 @@ public function Custom($id)
         $sqlQuery->execute();
     }
 ```
-
+## Gulp 
+It has gulp out of the box. Just run `npm run runserver` if you have gulp installed locally
+## Npm 
+It uses npm out of the box. Just install javascript modules by `npm install module-name` and include it as the example below:
+```
+<script type="text/javascript" src="{{ MODULE }}jquery/dist/jquery.js"></script>
+```
 #### Many More Features
 There are many more features of SimpleFramework, that is not covered here. please go through this framework and see for yourself :) 
