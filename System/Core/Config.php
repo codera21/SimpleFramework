@@ -25,7 +25,7 @@ class Config
         $this->config['WebInterfaceFolder'] = "WebInterface";
         $this->config['isAdmin'] = false;
         $this->config['InterfaceDefaultRoute'] = array('Controller' => 'Home', 'Action' => 'Index');
-        $this->config['AdminDefaultRoute'] = array('Controller' => 'AutoDashboard', 'Action' => 'Index');
+        $this->config['AdminDefaultRoute'] = array('Controller' => 'Dashboard', 'Action' => 'Index');
     }
 
     function GetConfig()

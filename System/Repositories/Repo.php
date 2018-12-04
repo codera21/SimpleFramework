@@ -3,7 +3,7 @@
 namespace System\Repositories;
 
 use Application\Config\ConnectionHelper;
-use Shared\Model\UserLog;
+use Shared\Model\AjaxGrid;
 use WebInterface\Models;
 use Infrastructure\SessionVariables;
 
@@ -15,17 +15,15 @@ class Repo
 
     private $modelClass;
 
-    function __construct($table, $modelClass)
+    public function __construct($table, $modelClass)
     {
         $connectionHelper = new ConnectionHelper();
-
-        $this->UserLogModel = new UserLog();
 
         $this->dbConnection = $connectionHelper->dbConnect();
 
         $this->table = $table;
 
-        $this->modelClass = $modelClass;
+        $this->modelClass =  $modelClass;
     }
 
     protected function GetDbConnection()
@@ -37,8 +35,9 @@ class Repo
     {
         $modelArray = (array)$model;
 
-        if ($table != null)
+        if ($table != null) {
             $this->table = $table;
+        }
 
         foreach ($removeFields as $removeField) {
             unset($modelArray[$removeField]);
@@ -72,10 +71,11 @@ class Repo
             unset($modelArray[$removeField]);
         }
 
-        if ($table == null)
+        if ($table == null) {
             $updateSql = "UPDATE `{$this->table}` SET ";
-        else
+        } else {
             $updateSql = "UPDATE `$table` SET ";
+        }
 
         $keys = array_keys($modelArray);
 
@@ -86,22 +86,26 @@ class Repo
         $updateSql = rtrim($updateSql, ',');
 
         if ($updateFrom == null) {
-            if ($id == null)
+            if ($id == null) {
                 $updateSql .= " WHERE ID=:ID";
-            else
+            } else {
                 $updateSql .= " WHERE $id=:$id";
-        } else
+            }
+        } else {
             $updateSql .= " WHERE $updateFrom=:$updateFrom";
+        }
 
         $sqlQuery = $this->GetDbConnection()->prepare($updateSql);
 
         if ($updateFrom == null) {
-            if ($id == null)
+            if ($id == null) {
                 $sqlQuery->bindValue(":ID", $model->ID);
-            else
+            } else {
                 $sqlQuery->bindValue(":$id", $model->$id);
-        } else
+            }
+        } else {
             $sqlQuery->bindValue(":$updateFrom", $updateFromValue);
+        }
 
         foreach ($modelArray as $key => $value) {
             $sqlQuery->bindValue(":" . $key, $value);
@@ -144,7 +148,6 @@ class Repo
 
             return true;
         } catch (\Exception $e) {
-
             return false;
         }
     }
@@ -215,7 +218,6 @@ class Repo
         $list = array();
 
         foreach ($sqlQuery->fetchAll(\PDO::FETCH_ASSOC) as $row) {
-
             $model = new $this->modelClass();
 
             $model->MapParameters($row);
@@ -225,7 +227,7 @@ class Repo
         return $list;
     }
 
-    function Check($id)
+    public function Check($id)
     {
         $sql = 'SELECT Count(*) FROM `{$this->table}` WHERE ID=:ID';
 
@@ -236,5 +238,44 @@ class Repo
         $sqlQuery->execute();
 
         return $sqlQuery->fetch(\PDO::FETCH_COLUMN) == 0 ? false : true;
+    }
+
+
+    public function AjaxGridPaginate(AjaxGrid $ajaxGrid, $filter = null, $table = null)
+    {
+        if ($table == null) {
+            $table = $this->table;
+        }
+        $modalObj = new $this->modelClass;
+
+        if ($filter == null) {
+            $sql = "SELECT * FROM `$table` ORDER BY $ajaxGrid->sortExpression $ajaxGrid->sortOrder
+            LIMIT $ajaxGrid->offset,$ajaxGrid->rowNumber";
+        } else {
+            $sql = "SELECT * FROM `$table` WHERE ";
+            foreach ($modalObj as  $key => $value) {
+                $sql .=  "`$key` LIKE '%$filter%'  OR ";
+            }
+            $sql = rtrim($sql, 'OR ');
+            $sql .= " ORDER BY $ajaxGrid->sortExpression $ajaxGrid->sortOrder LIMIT $ajaxGrid->offset,$ajaxGrid->rowNumber";
+        }
+
+        $sqlQuery = $this->GetDbConnection()->query($sql);
+        $data = $sqlQuery->fetchAll(\PDO::FETCH_ASSOC);
+        if ($filter == null) {
+            $sqlQuery = $this->GetDbConnection()->query("SELECT Count(*) FROM {$table}");
+        } else {
+            $sql = "SELECT Count(*) FROM `$table` WHERE ";
+            foreach ($modalObj as  $key => $value) {
+                $sql .=  "`$key` LIKE '%$filter%'  OR ";
+            }
+            $sql = rtrim($sql, 'OR ');
+            $sqlQuery = $this->GetDbConnection()->query($sql);
+        }
+        $rowCount = $sqlQuery->fetch();
+        $list['RowCount'] = $rowCount[0];
+        $list['Data'] = $data;
+        $list['PageNumber'] = $ajaxGrid->pageNumber;
+        return json_encode($list);
     }
 }
