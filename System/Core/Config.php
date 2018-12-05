@@ -20,10 +20,9 @@ class Config
      */
     private function initialize()
     {
-        $this->config['AdminFolderSecureName'] = "bo";
+        $this->config['AdminFolderSecureName'] = "admin";
         $this->config['AdminFolder'] = "Admin";
         $this->config['WebInterfaceFolder'] = "WebInterface";
-        $this->config['isAdmin'] = false;
         $this->config['InterfaceDefaultRoute'] = array('Controller' => 'Home', 'Action' => 'Index');
         $this->config['AdminDefaultRoute'] = array('Controller' => 'Dashboard', 'Action' => 'Index');
     }

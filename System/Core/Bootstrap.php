@@ -23,6 +23,8 @@ spl_autoload_register(function ($class) {
  */
 $objConfig = new System\Core\Config();
 $AppConfig = $objConfig->GetConfig();
+$AppConfig['isAdmin'] = false;
+$AppConfig['isAPI'] = false;
 /*
  *  Load the global functions
  */
@@ -34,8 +36,8 @@ $uri = str_replace('index.php', "", $uri);
 $uri = strpos($uri, '?') ? substr($uri, 0, strpos($uri, '?')) : $uri;
 
 if ($uri != "/") {
-    if (strpos($uri, $AppConfig['AdminFolderSecureName'])) {
-        $uri = str_replace($AppConfig['AdminFolderSecureName'], "", $uri);
+    if (stripos($uri, $AppConfig['AdminFolderSecureName']) !== false) {
+        $uri = preg_replace('/' . $AppConfig['AdminFolderSecureName'] . '/', "", $uri, 1);
         $AppConfig['isAdmin'] = true;
         define('PANEL', $AppConfig['AdminFolder']);
         define('ADMIN_FOLDER_SECURE_NAME', $AppConfig['AdminFolderSecureName']);
