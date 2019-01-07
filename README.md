@@ -10,6 +10,12 @@ you will need what a typical php project will require.
 2. run composer update 
 3. run npm install
 
+## Guidelines
+1. Controller Name must be in `CapitalCase` and must follow `Controller` suffix
+2. Function inside the Controller also must be in `CapitalCase` and must follow `Action` suffix
+3. Table in Database and it's respective Model Class name must be in pural.
+
+## Getting Started
 
 ### Using the Controller
  Inside `Application\WebInterface`you will see three folders `Controllers` , `Models` , `ViewModels` , `Views`. Goto Controllers then Create one new Controller Let's Say `PageController.php`  with one method `IndexAction()` the code is as shown below:
