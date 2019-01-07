@@ -163,8 +163,6 @@ public function Custom($id)
         $sqlQuery->execute();
     }
 ```
-## Gulp 
-It has gulp out of the box. Just run `npm run runserver` if you have gulp installed locally
 ## Npm 
 It uses npm out of the box. Just install javascript modules by `npm install module-name` and include it as the example below:
 ```

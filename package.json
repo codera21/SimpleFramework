@@ -10,19 +10,12 @@
     "popper.js": "^1.14.4"
   },
   "devDependencies": {
-    "compass": "^0.1.1",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-compass": "^2.1.0",
-    "gulp-connect-php": "^1.0.3",
-    "gulp-plumber": "^1.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
   },
   "scripts": {
-    "runserver": "gulp",
+    "build-css": "node-sass --include-path includes/scss includes/scss/main.scss   includes/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
