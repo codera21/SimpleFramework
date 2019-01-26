@@ -59,7 +59,9 @@ if ($uri != "/") {
 }
 
 // install twig loader
-$loader = new Twig_Loader_Filesystem(array(BASE_PATH, BASE_PATH . DS . APP_PATH . DS . "Shared" . DS . "Views" . DS));
+$loader = new Twig_Loader_Filesystem(array(BASE_PATH,
+    BASE_PATH . DS . APP_PATH . DS . PANEL . DS . "Views" . DS,
+    BASE_PATH . DS . APP_PATH . DS . "Shared" . DS . "Views" . DS));
 $twig = new Twig_Environment($loader, array(
     'debug' => true,
     // ...
