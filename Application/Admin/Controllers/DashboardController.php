@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function IndexAction()
     {
-        echo("Hello Admin !");
+        echo("Hello Admin ! ");
 
     }
 
