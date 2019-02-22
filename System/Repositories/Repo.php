@@ -89,7 +89,7 @@ class Repo
             if ($id == null) {
                 $updateSql .= " WHERE ID=:ID";
             } else {
-                $updateSql .= " WHERE ID=:$id";
+                $updateSql .= " WHERE $id=:$id";
             }
         } else {
             $updateSql .= " WHERE $updateFrom=:$updateFrom";
