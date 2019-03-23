@@ -40,9 +40,11 @@ function replaceString($string, $replaceArray)
 
 function dd($var1 = "here", $var2 = "", $var3 = "")
 {
+    echo("<pre>");
     var_dump($var1);
     var_dump($var2);
     var_dump($var3);
+    echo("</pre>");
     exit;
 }
 
@@ -76,4 +78,5 @@ function generateSlug($text)
     }
     return $text;
 }
+
 

@@ -4,8 +4,6 @@ namespace System\Repositories;
 
 use Application\Config\ConnectionHelper;
 use Shared\Model\AjaxGrid;
-use WebInterface\Models;
-use Infrastructure\SessionVariables;
 
 class Repo
 {
@@ -33,7 +31,7 @@ class Repo
 
     public function Insert($model, $removeFields = array(), $table = null)
     {
-        $modelArray = (array)$model;
+        $modelArray = (array) $model;
 
         if ($table != null) {
             $this->table = $table;
@@ -63,9 +61,9 @@ class Repo
         return $this->GetDbConnection()->lastInsertId();
     }
 
-    public function UpdateTable($model, $removeFields, $id = null, $table = null, $updateFrom = null, $updateFromValue = null)
+    public function UpdateTable($model, $removeFields = array(), $id = null, $table = null, $updateFrom = null, $updateFromValue = null)
     {
-        $modelArray = (array)$model;
+        $modelArray = (array) $model;
 
         foreach ($removeFields as $removeField) {
             unset($modelArray[$removeField]);
@@ -96,15 +94,10 @@ class Repo
         }
 
         $sqlQuery = $this->GetDbConnection()->prepare($updateSql);
-
-        if ($updateFrom == null) {
-            if ($id == null) {
-                $sqlQuery->bindValue(":ID", $model->ID);
-            } else {
-                $sqlQuery->bindValue(":$id", $model->$id);
-            }
+        if ($id == null) {
+            $sqlQuery->bindValue(':ID', $model->ID);
         } else {
-            $sqlQuery->bindValue(":$updateFrom", $updateFromValue);
+            $sqlQuery->bindValue(':' . $id, $model->$id);
         }
 
         foreach ($modelArray as $key => $value) {
@@ -112,7 +105,6 @@ class Repo
         }
         $sqlQuery->execute();
     }
-
 
     public function GetCurrentDate()
     {
@@ -175,7 +167,7 @@ class Repo
     {
         $viewModel = new $viewModelClass();
 
-        $viewModelArray = (array)$viewModel;
+        $viewModelArray = (array) $viewModel;
 
         $keys = array_keys($viewModelArray);
 
@@ -240,7 +232,6 @@ class Repo
         return $sqlQuery->fetch(\PDO::FETCH_COLUMN) == 0 ? false : true;
     }
 
-
     public function AjaxGridPaginate(AjaxGrid $ajaxGrid, $filter = null, $table = null)
     {
         if ($table == null) {
@@ -303,3 +294,4 @@ class Repo
     }
 
 }
+
