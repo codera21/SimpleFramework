@@ -8,7 +8,7 @@ you will need what a typical php project will require.
 ## Installation 
 1. clone this repository 
 2. run composer update 
-3. run npm install
+
 
 ## Guidelines
 1. Controller Name must be in `CapitalCase` and must follow `Controller` suffix
