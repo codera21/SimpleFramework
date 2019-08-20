@@ -1,5 +1,5 @@
 {
-    "name": "codera21/simpleframework",
+    "name": "codera21/sf",
     "type": "project",
     "description": "Simple php framework inspired by codeigniter, laravel, yii ",
     "keywords": ["php","php framework" , "laravel" , "simple framework" , "yii" , "codeigniter"],
