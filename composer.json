@@ -19,5 +19,5 @@
         "twig/twig": "^2.0"
     },
     "minimum-stability": "dev",
-    "prefer-stable": false,
+    "prefer-stable": false
 }
