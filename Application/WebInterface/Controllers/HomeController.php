@@ -8,6 +8,7 @@ class HomeController extends Controller
 {
     function IndexAction()
     {
+        
         try {
             $this->load->TwigView('Home/index');
         } catch (\Exception $e) {
