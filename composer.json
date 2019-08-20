@@ -1,11 +1,11 @@
 {
-    "name": "codera21/sf",
+    "name": "codera21/simpleframework",
     "type": "project",
     "description": "Simple php framework inspired by codeigniter, laravel, yii ",
     "keywords": ["php","php framework" , "laravel" , "simple framework" , "yii" , "codeigniter"],
     "homepage": "https://github.com/codera21/SimpleFramework",
     "license": "MIT",
-    
+
     "authors": [
         {
             "name": "Atul Nepal",
