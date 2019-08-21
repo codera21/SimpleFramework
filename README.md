@@ -5,7 +5,7 @@ It is a MVC framwork made in PHP.
 Since I am using latest version of twig and it needs at least php 7.0. 
 you will need what a typical php project will require. 
    
-## Installation (Needs Composer)
+## Installation
 run: 
 - `composer create-project codera21/sf project_name`
 - `cd project_name`
