@@ -8,15 +8,14 @@
 
 namespace WebInterface\Controllers\API;
 
-
 use System\MVC\Controller;
-
 
 class HomeController extends Controller
 {
     public function IndexAction()
     {
-        echo("Hello World From API");
+        $ret = json_encode(['status' => 200]);
+        echo ($ret);
     }
 
 }
