@@ -45,24 +45,7 @@ In the same PageController I created a new method AddAction(int $num1 , int $num
     }
 ```
 Now if you navigate to link like `http://localhost:90/SimpleFrameWork/Page/Add/5/5` then you will see in the page 10 echoed out.
-### Using the view 
-Twig  is used as templating language for the framework 
-The base twig file is in `Application/Shared/View/base.twig` you will see the base html with common libaries like bootstraps, jquery, etc. are installed already. 
-Let's make a new folder called `Page` in the `WebInterface/Views` and make a new file index.twig with following code:
-```
-{% extends 'base.twig' %}
-{% block content %}
-    <p class="text-center">{{ data }}</p>
-{% endblock %}
-```
-In the IndexAction of PageController the code to load view as shown below:
-```
-public function IndexAction()
-{
- $data = "Hello World !";
- $this->load->TwigView('Page/index', ['data' => $data]);
-}
-```
+
 ### Dealing with database
 One of the strong suite of the SimpleFramework is its easy to use out of the box ORM for common database queries:
 
