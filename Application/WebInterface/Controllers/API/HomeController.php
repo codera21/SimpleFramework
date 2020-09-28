@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function IndexAction()
     {
-        $ret = json_encode(['status' => 200]);
+        $ret = json_encode(['status' => 200, 'apiHomePageCollection' => "OK"]);
         echo ($ret);
     }
 

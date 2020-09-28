@@ -1,6 +1,6 @@
 <?php
 
-namespace WebInterface\Controllers;
+namespace WebInterface\Controllers\API;
 
 use System\MVC\Controller;
 
@@ -8,10 +8,8 @@ class HomeController extends Controller
 {
     public function IndexAction()
     {
-        try {
-            $this->load->TwigView('Home/index');
-        } catch (\Exception $e) {
-            var_dump("Error :" . $e);
-        }
+        $ret = json_encode(['status' => 200, 'homePageCollection' => "OK"]);
+        echo ($ret);
     }
+
 }
