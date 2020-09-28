@@ -2,21 +2,26 @@
     "name": "codera21/sf",
     "type": "project",
     "description": "Simple php framework inspired by codeigniter, laravel, yii ",
-    "keywords": ["php","php framework" , "laravel" , "simple framework" , "yii" , "codeigniter"],
+    "keywords": [
+        "php",
+        "php framework",
+        "laravel",
+        "simple framework",
+        "yii",
+        "codeigniter"
+    ],
     "homepage": "https://github.com/codera21/SimpleFramework",
     "license": "MIT",
-
     "authors": [
         {
             "name": "Atul Nepal",
             "email": "atul.nepal@gmail.com",
             "homepage": "http://atulnepal.com.np/",
-            "role": "Developer"
+            "role": "Author"
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "twig/twig": "^2.0"
+        "php": ">=5.3.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": false

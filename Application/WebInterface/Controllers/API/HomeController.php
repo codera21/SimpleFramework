@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dell
- * Date: 12/5/2018
- * Time: 9:09 PM
- */
 
 namespace WebInterface\Controllers\API;
 

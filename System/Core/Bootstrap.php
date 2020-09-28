@@ -6,13 +6,13 @@ require_once 'vendor/autoload.php';
 spl_autoload_register(function ($class) {
     $class = str_replace('\\', DS, $class);
     if (file_exists($class . '.php')) {
-        require_once($class . '.php');
+        require_once ($class . '.php');
     } elseif (file_exists(APP_PATH . DS . $class . '.php')) {
-        require_once(APP_PATH . DS . $class . '.php');
+        require_once (APP_PATH . DS . $class . '.php');
     } elseif (file_exists(BASE_PATH . DS . $class . '.php')) {
-        require_once(BASE_PATH . DS . $class . '.php');
+        require_once (BASE_PATH . DS . $class . '.php');
     } elseif (file_exists(BASE_PATH . DS . APP_PATH . DS . $class . '.php')) {
-        require_once(BASE_PATH . DS . APP_PATH . DS . $class . '.php');
+        require_once (BASE_PATH . DS . APP_PATH . DS . $class . '.php');
     } else {
         echo "Error::$class.php not found";
     }
@@ -28,7 +28,7 @@ $AppConfig['isAPI'] = false;
 /*
  *  Load the global functions
  */
-require_once('Common.php');
+require_once 'Common.php';
 $uri = $_SERVER['REQUEST_URI'];
 $directory = str_replace('/index.php', "", substr($uri, 0, strpos($_SERVER['PHP_SELF'], '/index.php')));
 $uri = str_replace($directory, "", $uri);
@@ -44,28 +44,21 @@ if ($uri != "/") {
     }
 }
 
-if (!defined('PANEL'))
+if (!defined('PANEL')) {
     define('PANEL', $AppConfig['WebInterfaceFolder']);
+}
 
 $router = new System\Core\Router($AppConfig);
 
 if ($uri != "/") {
     $router->pathRoute($uri);
 } else {
-    if ($AppConfig['isAdmin'])
+    if ($AppConfig['isAdmin']) {
         $router->adminDefaultRoute();
-    else
+    } else {
         $router->interfaceDefaultRoute();
-}
+    }
 
-// install twig loader
-$loader = new Twig_Loader_Filesystem(array(BASE_PATH,
-    BASE_PATH . DS . APP_PATH . DS . PANEL . DS . "Views" . DS,
-    BASE_PATH . DS . APP_PATH . DS . "Shared" . DS . "Views" . DS));
-$twig = new Twig_Environment($loader, array(
-    'debug' => true,
-    // ...
-));
-$twig->addExtension(new Twig_Extension_Debug());
+}
 
 $router->launch();
